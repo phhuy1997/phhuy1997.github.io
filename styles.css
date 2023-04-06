@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+  }
+
+
+  #wrapper{
+    max-width: 100%; /*wrapper width = 100% so với khung hình*/
+    min-width: 573px;
+    color: White;
+    border: 1px solid black;
+    padding: 0px auto;
+    margin: 0px;
+    height: 1500px;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-image:url(http://bit.ly/2gPLxZ4);
+
+  }
+
+  #header{
+      max-width: 100%;
+      background-Color: Yellow;
+      padding: 0px auto;
+      padding-left: 0px;
+
+  }
+
+  #main-content{
+    display:flex;
+    max-height: 1450px;
+    min-height: 950px;
+  }
+
+  #sidebar{
+    flex-basis: 28%;
+    height: 1450px;
+  }
+
+  #content{
+    flex-basis:72%;
+  }
+
+  .navbar-font-me{
+      font-size: 1rem;
+      margin-right: 20px;
+  }
+
+
+  .info{
+    font-size: 20px;
+    min-width: 200px;
+    max-width: 350px;
+
+    margin-left: 60px;
+    margin-bottom: 20px;
+  }
+
+  .logo{
+    width: 17px
+  }
+
+  .firstRow{
+    padding-top: 80px;
+    text-align: center;
+    margin: auto;
+    min-width: 300px;
+    max-width: 730px;
+  }
+
+  .FollowingRow{
+    padding: 0;
+    text-align: center;
+    margin: auto;
+    min-width: 300px;
+    max-width: 730px;
+  }
+
+  .Element{
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .DescriptionShort{
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .DescriptionLong{
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+    /*@media (min-width: 600px)
+      .navbar-expand-lg {
+          flex-wrap: nowrap;
+          justify-content: flex-start;}
+      */
