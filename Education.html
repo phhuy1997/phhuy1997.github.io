@@ -2,10 +2,11 @@
 
 <html lang="en">
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>My Webpage</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <link href="styles.css" rel="stylesheet">
+      <title>My Webpage</title>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
       <div id="wrapper">
@@ -60,7 +61,7 @@
           </nav>
         </div>
 
-        <div id = "main-content">
+        <div id = "main-content" >
           <div id = "sidebar">
             <div style = "text-align:center; padding-top: 60px">
               <image  src="ava.jpeg" class = "img-fluid" style="width:44%; background-color: transparent" alt = "Logo"></image>
@@ -101,18 +102,56 @@
           </div> <!--End sidebar-->
 
           <div id = "content">
-            <div class = "firstRow">
-              <h1 class = "Element">UNIVERSITY:</h1>
-              <p class = "DescriptionShort">Da Nang University Of Technology And Science</p>
-            </div>
-            <div class = "FollowingRow">
-              <h1 class = "Element">BACHELOR OF ENGINEER:</h1>
-              <p class = "DescriptionShort">Mechanical Product Manufacturing</p>
-              <p class = "DescriptionShort">GPA: 2.74/4.0</p>
-              <p class = "DescriptionShort">Degree Classification: Good</p>
-            </div>
-            <div class = "FollowingRow">
-              <image src="university.PNG" class = "Element" style="width:70%" alt = "Logo"></image>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" data-bs-interval="20000">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" id="carousel-content">
+                  <div class = "firstRow">
+                    <a href = "https://cs50.harvard.edu/x/2023/">
+                      <h1 class = "Element" style = "color:rgb(0, 170, 255)">CS50's COMPUTER SICENCE.</h1>
+                    </a>
+                    <p class = "DescriptionShort">(The online course from Hardvard University)</p>
+                  </div>
+                  <div class = "FollowingRow">
+                    <div class = "FollowingRow">
+                      <ul class = "DescriptionLong">
+                        <li>This course teaches me how to solve problems and program fundamentally.</li>
+                        <li>CS50 covers a wide range of foundational topics in computer science, including algorithms, data structures, software engineering, and web development.</li>
+                        <li>It teaches problem-solving skills, computational thinking, and programming languages such as C, Python, and SQL</li>
+                        <li>There are 10 Problem Sets, 9 Labs that student must be passed. Ultimately, Final project of this course is the Course's culmination</li>
+                      </ul>
+                    </div>
+                    <image src="cs50cer.png" class = "Element" style="width:45%" alt = "Logo"/>
+                    <image src="edXCer.png" class = "Element" style="width:53%" alt = "Logo"/>
+                  </div>
+                </div> <!--End Carasel 1-->
+                <div class="carousel-item" id="carousel-content">
+                  <div class = "firstRow">
+                    <h1 class = "Element">UNIVERSITY:</h1>
+                    <p class = "DescriptionShort">Da Nang University Of Technology And Science</p>
+                  </div>
+                  <div class = "FollowingRow">
+                    <h1 class = "Element">BACHELOR OF ENGINEER:</h1>
+                    <p class = "DescriptionShort">Mechanical Product Manufacturing</p>
+                    <p class = "DescriptionShort">GPA: 2.74/4.0</p>
+                    <p class = "DescriptionShort">Degree Classification: Good</p>
+                  </div>
+                  <div class = "FollowingRow">
+                    <image src="university.PNG" class = "Element" style="width:60%" alt = "Logo"></image>
+                  </div>
+                </div> <!--End Carasel 2-->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"  style = "background-color: black"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon"  style = "background-color: black"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div> <!--end contain-->
         </div> <!--End main-contain-->

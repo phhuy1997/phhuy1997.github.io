@@ -11,7 +11,7 @@
     border: 1px solid black;
     padding: 0px auto;
     margin: 0px;
-    height: 1500px;
+    height: 120vh;
 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,17 +31,17 @@
 
   #main-content{
     display:flex;
-    max-height: 1450px;
-    min-height: 950px;
+    height: 100vh;
   }
 
   #sidebar{
     flex-basis: 28%;
-    height: 1450px;
+    height: 100%;
   }
 
   #content{
     flex-basis:72%;
+    height: 100%;
   }
 
   .navbar-font-me{
@@ -63,8 +63,12 @@
     width: 17px
   }
 
+  #carousel-content{
+    height: 650px;
+  }
+
   .firstRow{
-    padding-top: 80px;
+    padding-top: 20px;
     text-align: center;
     margin: auto;
     min-width: 300px;
@@ -80,17 +84,17 @@
   }
 
   .Element{
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 16px;
   }
 
   .DescriptionShort{
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 16px;
   }
 
   .DescriptionLong{
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 16px;
     text-align: left;
   }
