@@ -6,18 +6,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     </head>
     <body>
       <div id="wrapper">
         <div id = "header">
-          <nav class="navbar navbar-expand-md bg-dark navbar-dark" style = "padding:0px"> <!---->
+          <nav class="navbar navbar-expand-md bg-dark navbar-dark" style = "padding:0px">
             <div class="container-lg" style = "padding:0px">
               <!--Navbar text & image logo-->
-              <a class="navbar-brand" style = "padding:0px" href="index.html">
-                <img src="profile.PNG" alt="Logo" width="50" height="50"></image>
+              <a class="navbar-brand" style = "padding:0px" href="#" onclick="showSection('about'); return false;">
+                <img src="profile.PNG" alt="Logo" width="50" height="50">
                 <span class = "navbar-font-me" style: = "padding:8px">About me</span>
               </a>
               <!------------Navbar text & image logo--------------->
@@ -32,27 +29,27 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link activ" aria-current="page" href="Education.html">
+                    <a class="nav-link" href="#" data-section="education" onclick="showSection('education'); return false;">
                         <span class = "navbar-font-me">Education</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="WorkHistory.html">
+                    <a class="nav-link" href="#" data-section="workhistory" onclick="showSection('workhistory'); return false;">
                         <span class = "navbar-font-me">Work History</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="Skills.html">
+                    <a class="nav-link" href="#" data-section="skills" onclick="showSection('skills'); return false;">
                         <span class = "navbar-font-me">Skills</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="Projects.html">
+                    <a class="nav-link" href="#" data-section="projects" onclick="showSection('projects'); return false;">
                         <span class = "navbar-font-me">Projects</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="Certificate.html">
+                    <a class="nav-link" href="#" data-section="certificate" onclick="showSection('certificate'); return false;">
                         <span class = "navbar-font-me">Certifications & Activities</span>
                     </a>
                   </li>
@@ -104,27 +101,542 @@
           </div> <!--End sidebar-->
 
           <div id = "content">
-            <div class = "firstRow">
-              <h1 class = "Element">HOBBIES:</h1>
-              <p class = "DescriptionShort">Sports, Guitar, Travel, Chatting, Music.</p>
+            <!-- ==================== ABOUT SECTION ==================== -->
+            <div id="section-about" class="page-section active">
+              <div class = "firstRow">
+                <h1 class = "Element">HOBBIES:</h1>
+                <p class = "DescriptionShort">Sports, Guitar, Travel, Chatting, Music.</p>
+              </div>
+              <div class = "FollowingRow">
+                <h1 class = "Element">PERSONALITY:</h1>
+                <p class = "DescriptionShort">Responsible, Gentle, Honest, Ambitious.</p>
+              </div>
+              <div class="FollowingRow">
+                <h1 class="Element">OBJECTIVES:</h1>
+                <ul class="DescriptionLong">
+                  <li>I aim to work in a professional, dynamic, and challenging environment where I can contribute positively to the company. I am dedicated to working, learning, expanding my knowledge, and accumulating experience.</li>
+                  <li>After deciding to change myself as a software engineer, I aspire to become a full-stack engineer who excels in both front-end and Back-end development.</li>
+                  <li>I had enough experience time working in various project roles: starting as a Salesforce Intern, then working as a Test Automation Developer, Back-end Developer with .NET, and Front-end Developer with ReactJs.</li>
+                  <li>Now, It's time for me to choose the most suitable career path and follow it. I aspire to become a professional Salesforce Engineer. With my diverse experience, I'm confident that I can grow and excel in this industry.</li>
+                  <li>In the future, I desire to have a startup that produces convenient products of my own design. It can be a combination of IT and mechatronic products, aimed at addressing social issues.</li>
+                </ul>
+              </div>
             </div>
-            <div class = "FollowingRow">
-              <h1 class = "Element">PERSONALITY:</h1>
-              <p class = "DescriptionShort">Responsible, Gentle, Honest, Ambitious.</p>
+
+            <!-- ==================== EDUCATION SECTION ==================== -->
+            <div id="section-education" class="page-section">
+              <div id="carouselEducation" class="carousel slide" data-bs-ride="true" data-bs-interval="20000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselEducation" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselEducation" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="carousel-content">
+                    <div class = "firstRow">
+                      <a href = "https://cs50.harvard.edu/x/2023/" target="_blank">
+                        <h1 class = "Element" style = "color:rgb(0, 170, 255)">CS50's COMPUTER SCIENCE.</h1>
+                      </a>
+                      <p class = "DescriptionShort">(The online course from Harvard University)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <div class = "FollowingRow">
+                        <ul class = "DescriptionLong">
+                          <li>This course teaches me how to solve problems and program fundamentally.</li>
+                          <li>CS50 covers a wide range of foundational topics in computer science, including algorithms, data structures, software engineering, and web development.</li>
+                          <li>It teaches problem-solving skills, computational thinking, and programming languages such as C, Python, and SQL</li>
+                          <li>There are 10 Problem Sets, 9 Labs that student must be passed. Ultimately, <a href = 'https://www.youtube.com/watch?v=x02xgMy8oZI&t=45s' target="_blank">Final Project</a> of this course is the Course's culmination</li>
+                        </ul>
+                      </div>
+                      <image src="cs50cer.png" class = "Element" style="width:45%" alt = "Logo"/>
+                      <image src="edXCer.png" class = "Element" style="width:53%" alt = "Logo"/>
+                    </div>
+                  </div>
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">UNIVERSITY:</h1>
+                      <p class = "DescriptionShort">Da Nang University Of Technology And Science</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <h1 class = "Element">BACHELOR OF ENGINEER:</h1>
+                      <p class = "DescriptionShort">Mechanical Product Manufacturing</p>
+                      <p class = "DescriptionShort">GPA: 2.74/4.0</p>
+                      <p class = "DescriptionShort">Degree Classification: Good</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="university.PNG" class = "Element" style="width:60%" alt = "Logo"></image>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEducation" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" style = "background-color: black"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselEducation" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" style = "background-color: black"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-            <div class="FollowingRow">
-              <h1 class="Element">OBJECTIVES:</h1>
-              <ul class="DescriptionLong">
-                <li>I aim to work in a professional, dynamic, and challenging environment where I can contribute positively to the company. I am dedicated to working, learning, expanding my knowledge, and accumulating experience.</li>
-                <li>After deciding to change myself as a software engineer, I aspire to become a full-stack engineer who excels in both front-end and Back-end development.</li>
-                <li>I had enough experience time working in various project roles: starting as a Salesforce Intern, then working as a Test Automation Developer, Back-end Developer with .NET, and Front-end Developer with ReactJs.</li>
-                <li>Now, It's time for me to choose the most suitable career path and follow it. I aspire to become a professional Salesforce Engineer. With my diverse experience, I'm confident that I can grow and excel in this industry.</li>
-                <li>In the future, I desire to have a startup that produces convenient products of my own design. It can be a combination of IT and mechatronic products, aimed at addressing social issues.</li>
-              </ul>
+
+            <!-- ==================== WORK HISTORY SECTION ==================== -->
+            <div id="section-workhistory" class="page-section">
+              <div id="carouselWorkHistory" class="carousel slide" data-bs-ride="true" data-bs-interval="20000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselWorkHistory" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselWorkHistory" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselWorkHistory" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselWorkHistory" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselWorkHistory" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">DATAHOUSE ASIA: 11/2022 - Now</h1>
+                      <p class = "DescriptionShort">TITLE: SOFTWARE ENGINEER (09/2023 - Now)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                          <li>Main role: Front-end developer with ReactJs.</li>
+                          <li>Responsible for implementing visual and logic calculations for elements in a web application.</li>
+                          <li>Collaborate with Business Analysts, Back-end developers and UI/UX designers to improve usability.</li>
+                          <li>Fixing bugs, maintaining and improving UI websites.</li>
+                          <br/>
+                          <li>Additional role: Back-end developer with .NET, flexibly handle tasks at both BE and FE.</li>
+                          <li>Design APIs to collaborate with Front-End site.</li>
+                          <li>Handle and analyze requests from the front-end. Implement calculation logic to interact with database and respond to the front-end to continue progress.</li>
+                      </ol>
+                      <ul class = "DescriptionLong">Achievement:
+                        <li style = "margin-bottom: 0px">Sucessfully in build many business flows by implementing both BE and FE.</li>
+                        <li style = "margin-bottom: 0px">Sucessfully in build many elements and one of the most difficult logic element of the project.</li>
+                      </ul>
+                    </div>
+                    <div class = "FollowingRow" id="carousel-content">
+                      <image src="datahousePicture.png" class = "Element" style="width:40%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">DATAHOUSE ASIA: 11/2022 - Now</h1>
+                      <p class = "DescriptionShort">TITLE: TEST AUTOMATION DEVELOPER (03/2023 - 09/2023)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                          <li>Using TestCafe automation frameworks write programs that run automatic tests on existing web application</li>
+                          <li>Managing the testing process and investigating problems in software as a result of testing</li>
+                          <li>Researching and apply new tools from Jira into showing and finalizing result</li>
+                          <li>Working with QA analysts and software developers to find solutions.</li>
+                          <li style = "margin-bottom: 0px">Achievement: Reach established targets. Cover all complex test cases and Cutdown time & cost for company</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow" id="carousel-content">
+                      <image src="datahousePicture.png" class = "Element" style="width:40%" alt = "Logo"> </image>
+                      <br/>
+                      <image src="testCafeLogo.png" class = "Element" style="width:40%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">DATAHOUSE ASIA: 11/2022 - Now</h1>
+                      <p class = "DescriptionShort">TITLE: SALESFORCE DEVELOPER INTERN (11/2022 - 02/2023)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                          <li>Learn and create custom applications on the Salesforce1 Platform using Apex code and Aura Component.</li>
+                          <li>Joining into company's project: Fixing internal bugs at the first, then Build custom features & components, and work with BA team to solve the business needs.</li>
+                          <li>Collaborate with .NET team to integrate with main database from parent project</li>
+                          <li>Write unit test coverage for apex controller.</li>
+                          <li>Propose and refactor code for improved cleanliness.</li>
+                          <li style = "margin-bottom: 0px">Achievement: Passed Intern, and was approved to be the official employee.  </li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow" id="carousel-content">
+                      <image src="datahousePicture.png" class = "Element" style="width:20%" alt = "Logo"> </image>
+                      <br/>
+                      <image src="salesforceLogo.jpg" class = "Element" style="width:20%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element" style = "margin-bottom: 5px">PREMO VIET NAM CO.LTD: 11/2020 - 11/2022</h1>
+                      <p class = "DescriptionShort" style = "margin-bottom: 5px">TITLE: PROJECT & PROCESS ENGINEER (11/2021 - 11/2022)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>Prototype leader: Coordinate project core team including Purchasing, R&D, Production planner & Customer Planning team to followup prototype status. Predict and prepare taken actions to solve issues during making prototypes.</li>
+                        <li>Designing new processes and making PDCC for the project to reach established targets (Provide flow chart, Calculate process cycle time, capacity, process investment)</li>
+                        <li>Releasing official documentation for prototype production (Flow chart, Control plans, Working instructions).</li>
+                        <li>Supervising prototype production, Evaluating product design from R&D, and providing action on improving the design to meet the feasibility</li>
+                        <li>Finding new technology solutions and seeking, and coordinating with a suitable supplier</li>
+                        <li>Achievement: Awarded many key projects from crucial customer (Yazaki, Vitesco, FinePower, Canoo, Valeo) which is the main revenue of Premo Group now.</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="product.png" class = "Element" style="width:65%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">PREMO VIET NAM CO.LTD: 11/2020 - 11/2022</h1>
+                      <p class = "DescriptionShort">TITLE: AUTOMATION ENGINEER (11/2020 - 11/2021)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>Brainstorming, designing, and validating robotized and automatic machines for the production lines.</li>
+                        <li>Programing (PLC/ Scratch/ C) for robot and machine operation.</li>
+                        <li>Releasing official documentation for mass production (Flow chart, PFMEA, control plans, working instructions, line start checklist).</li>
+                        <li>Installing and performing machine set-up and training to mechanics and operators.</li>
+                        <li>Seeking and coordinating with suppliers to ensure machine meet target</li>
+                        <li style = "margin-bottom: 0px">Achievement: Reach established targets (capacity, quality, productivity, cost, ...).Cutdown cost for company</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow" id="carousel-content">
+                      <image src="https://assets.newatlas.com/dims4/default/41bf6cc/2147483647/strip/true/crop/1920x1080+0+0/resize/800x450!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fxarm-1.png"
+                            class = "Element" style="width:60%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselWorkHistory" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" style = "background-color: black"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselWorkHistory" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" style = "background-color: black"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-          </div> <!--end contain-->
-        </div> <!--End main-contain-->
+
+            <!-- ==================== SKILLS SECTION ==================== -->
+            <div id="section-skills" class="page-section">
+              <div class = "firstRow" style = "max-width: 530px">
+                <h1 class = "Element">ADVANCED SKILLS:</h1>
+                <ul class = "DescriptionLong">
+                  <li>Frameworks: ReactJs, .NET, Flask, Aura Component, Apex </li>
+                  <li>Git process management</li>
+                  <li>Testing and debugging</li>
+                  <li>Responsive design</li>
+                  <li>Program Languages: JavaScript(favorite), Java, C, C#, Python, SQL, HTML-CSS, Ladder </li>
+                  <li>Fundamental Computer Science understanding</li>
+                  <li>Project Management</li>
+                  <li>NonIT: Industrial Robots and Pneumatics System</li>
+                  <li>NonIT: 2D & 3D design: Autocad, Creo/Pro-e, NX, Solidworks.</li>
+                </ul>
+              </div>
+              <div class = "FollowingRow" style = "max-width: 530px">
+                <h1 class = "Element">SOFT SKILLS:</h1>
+                <ul class = "DescriptionLong">
+                  <li>Time management & Handling Pressure</li>
+                  <li>Team work and Integrate</li>
+                  <li>Reporting and make Presentation</li>
+                  <li>Collaborate and Negotiation with client & supplier</li>
+                  <li>English working Proficiency</li>
+                  <li>
+                    Languages: English
+                    <ul>
+                      <li>Level B2 (Upper-intermediate Level) 2019</li>
+                      <li><a href = 'EnglishTestResultC1.pdf' target="_blank">Level C1</a> (Advanced Level) 2023</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ==================== PROJECTS SECTION ==================== -->
+            <div id="section-projects" class="page-section">
+              <div id="carouselProjects" class="carousel slide" data-bs-ride="true" data-bs-interval="20000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">ERP - Enterprise Resource Planning</h1>
+                      <p class = "DescriptionShort">Datahouse Asia</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>Business Development Module: Gather and analysis all business opportunities and track via path. Then submit Opportunity to Contract Mangement Module</li>
+                        <li>Contract Management Module: Module that determine Win or Lose the Opportunity. Create contract for the won opportunity</li>
+                        <li>Project Management Module: Organize, Setup all events and items concerning human resources, subcontractors, projects, contracts. </li>
+                        <li>IT Management Module: Module control all IT Assets and devices that were distributed to employee in the company</li>
+                        <li>Supplier Management Module: An external module was built for supplier (subcontractor) using to interact with internal module</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="ERPsystem.png" class = "Element" style="width:35%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow" style="padding-top: 50px;">
+                      <h1 class = "Element">FLEZZ NETWORK</h1>
+                      <p class = "DescriptionShort">Non-profit Project About Social Network</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>Front-end developer with ReactJs.</li>
+                        <li>Front-end Coordinator: Gather and analysis technical requirements from SA and senior developer in Japan, then split tasks and transfer to young dev member in Vietnam</li>
+                        <li>Responsible for implementing visual and logic calculations for elements in a web application.</li>
+                        <li>Collaborate with Business Analysts, Back-end developers and UI/UX designers to improve usability.</li>
+                        <li>Fixing bugs, maintaining and improving UI websites.</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="FlezzLogo.png" class = "Element" style="width:35%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow" style="padding-top: 100px;">
+                      <h1 class = "Element">DCD TEST AUTOMATION</h1>
+                      <p class = "DescriptionShort">Datahouse Asia</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>Using TestCafe automation frameworks write programs that run automatic tests on Salesforce health insurance application</li>
+                        <li>Managing the testing process and investigating problems in software as a result of testing</li>
+                        <li>Researching and apply new tools from Jira into showing and finalizing result</li>
+                        <li>Working with QA analysts and software developers to find solutions.</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="testCafeLogo.png" class = "Element" style="width:35%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow" style="padding-top: 20px;">
+                      <h1 class = "Element">CAMA</h1>
+                      <p class = "DescriptionShort">Datahouse Asia - IPTS</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>CAMA is one of a program in IPTS system.</li>
+                        <li>CAMA application was built on Salesforce Platform. It serves for the purpose of Evaluation the Real Estate in US</li>
+                        <li>Join project as an intern salesforce developer. Fixing internal bugs at the first.</li>
+                        <li>Then implement new features & components (about change logs), and work with BA team to solve the business needs.</li>
+                        <li>Collaborate with .NET team to integrate with main database from parent system (IPTS)</li>
+                        <li>Write unit test coverage for apex controller.</li>
+                        <li>Propose and refactor code for improved cleanliness.</li>
+                      </ol>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="datahousePicture.png" class = "Element" style="width:35%" alt = "Logo"> </image>
+                      <br/>
+                      <image src="salesforceLogo.jpg" class = "Element" style="width:20%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">XARM ROBOT</h1>
+                      <p class = "DescriptionShort">Period: 2020 Premo Vietnam</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ol class = "DescriptionLong">
+                        <li>Auto Gluing machine: Replace manual method at gluing station by using Xarm Robot</li>
+                        <li>Auto Soldering machine: Replace manual method at soldering station by using Xarm Robot</li>
+                        <li>Auto Marking machine: Replace manual method at marking station by using Xarm Robot</li>
+                        <li>Automatic pick and place for winding machine: Replace operators at winding station by using Xarm Robot</li>
+                      </ol>
+                      <div class = "FollowingRow">
+                        <ul class = "DescriptionLong">
+                            <li><a href="https://drive.google.com/file/d/1dppWwMYL6VkQoZdZqrmYBq11CPK6FtFe/view?usp=sharing" target="_blank">Video 1:</a></li>
+                            <li><a href="https://drive.google.com/file/d/13dmMBM-UwVnFgS_CirR3WfP7ShW-OdN2/view?usp=share_link" target="_blank">Video 2:</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="Gluing.jpg" class = "Element" style="width:50%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">CHICKEN SMART FARM MODEL</h1>
+                      <p class = "DescriptionShort">Period: 2020 DUT</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <ul class = "DescriptionLong">
+                        <li>By applying automation, PLC and Arduino programming to the rearing, living, and balancing the environment around the chicken coop, the chickens grow better and reduce the possibility of disease.</li>
+                        <li>Specifically, the main functions of the model include: Automatic feeding mechanism, automatic awning mechanism, automatic curtain mechanism. And apply environmental sensors (eg Rain sensor, Sun sensor, ...) to control temperature balance features such as cooling fan, misting humidifier.</li>
+                        <li>Achievement: Evaluated 9/10 points</li>
+                        <li><a href="https://drive.google.com/file/d/12pJocFUzOFBjXK2MAgWH9K0CLbhUB-Zg/view?usp=share_link" target="_blank">Video:</a></li>
+                      </ul>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="DATN.PNG" class = "Element" style="width:35%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" style = "background-color: black"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" style = "background-color: black"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+            <div id="section-certificate" class="page-section">
+              <div id="carouselCertificate" class="carousel slide" data-bs-ride="true" data-bs-interval="20000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselCertificate" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselCertificate" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselCertificate" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselCertificate" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselCertificate" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="carousel-content">
+                    <div class = "firstRow">
+                      <a href = "https://cs50.harvard.edu/x/2023/" target="_blank">
+                        <h1 class = "Element" style = "color:rgb(0, 170, 255)">CS50's COMPUTER SCIENCE.</h1>
+                      </a>
+                      <p class = "DescriptionShort">(The online course from Harvard University)</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <div class = "FollowingRow">
+                        <ul class = "DescriptionLong">
+                          <li>This course teaches me how to solve problems and program fundamentally.</li>
+                          <li>It starts by C language to help me learn the fundamental knowlege. Then transition to Python, a higher-level language that help me understand all the more because of C.</li>
+                          <li>Toward term's end, the course introduces SQL which can store data in databases, along with HTML, CSS, and JavaScript, via which I can create web. (This website is the one I applied to creat on my own)</li>
+                          <li>There are 10 Problem Sets, 9 Labs that student must be passed. Ultimately, <a href = 'https://www.youtube.com/watch?v=x02xgMy8oZI&t=45s' target="_blank">Final Project</a> of this course is the Course's culmination</li>
+                        </ul>
+                      </div>
+                      <image src="cs50cer.png" class = "Element" style="width:50%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">ROBOT COMPETITIONS FOR HIGH SCHOOL STUDENT</h1>
+                    </div>
+                    <div class = "FollowingRow">
+                      <p class = "DescriptionShort">1. ROBODNIC 2013</p>
+                      <p class = "DescriptionShort">2. ROBODNIC 2014</p>
+                      <p class = "DescriptionShort">3. ROBODNIC 2015: Second Prize</p>
+                      <p class = "DescriptionShort">4. Technical Mentor at ROBODNIC 2016: First Prize Team</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="RBN.png" class = "Element" style="width:70%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">VOLUNTEER DIFF 2019 (DA NANG INTERNATIONAL FIREWORKS FESTIVAL 2019).</h1>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="DIFF.jpeg" class = "Element" style="width:90%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">3D DESIGN ROBOT COMPETITIONS FOR DA NANG UNIVERSITY OF SCIENCE</h1>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="MiniRBC.png" class = "Element" style="width:90%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" id="carousel-content">
+                    <div class = "firstRow">
+                      <h1 class = "Element">COURSE 5 CORE TOOLS USING IN IATF CRITERIA.</h1>
+                      <p class = "DescriptionShort">Period: 2021 Premo Vietnam</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <h1 class = "Element">THINKING CREATIVE AND SOLVING PROBLEM.</h1>
+                      <p class = "DescriptionShort">Period: 2022 Premo Vietnam</p>
+                    </div>
+                    <div class = "FollowingRow">
+                      <image src="Creative.PNG" class = "Element" style="width:70%" alt = "Logo"> </image>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificate" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificate" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+          </div> <!--end content-->
+        </div> <!--End main-content-->
       </div>
+
+      <script>
+        // SPA Navigation JavaScript
+        function showSection(sectionName) {
+          // Hide all sections
+          const sections = document.querySelectorAll('.page-section');
+          sections.forEach(section => {
+            section.classList.remove('active');
+          });
+          
+          // Show the selected section
+          const targetSection = document.getElementById('section-' + sectionName);
+          if (targetSection) {
+            targetSection.classList.add('active');
+          }
+          
+          // Update active state in navbar
+          const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-section') === sectionName) {
+              link.classList.add('active');
+            }
+          });
+          
+          // Update navbar brand active state
+          const navbarBrand = document.querySelector('.navbar-brand');
+          if (sectionName === 'about') {
+            navbarBrand.classList.add('active');
+          } else {
+            navbarBrand.classList.remove('active');
+          }
+          
+          // Update URL hash without page reload
+          history.pushState(null, '', '#' + sectionName);
+          
+          // Reset carousel to first slide when switching sections
+          const carousel = targetSection.querySelector('.carousel');
+          if (carousel) {
+            const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+            bsCarousel.to(0);
+          }
+        }
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+          const hash = window.location.hash.substring(1) || 'about';
+          showSection(hash);
+        });
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+          const hash = window.location.hash.substring(1) || 'about';
+          showSection(hash);
+        });
+      </script>
 
     </body>
 </html>

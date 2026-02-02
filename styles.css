@@ -98,3 +98,36 @@
     margin-bottom: 16px;
     text-align: left;
   }
+
+  /* SPA Page Section Styles */
+  .page-section {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .page-section.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Active nav link styling */
+  .navbar-nav .nav-link.active {
+    color: #fff !important;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
+
+  .navbar-brand.active span {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
