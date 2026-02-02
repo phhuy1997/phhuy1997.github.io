@@ -2,6 +2,7 @@
 
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
@@ -9,13 +10,44 @@
     </head>
     <body>
       <div id="wrapper">
-        <div id = "header">
-          <nav class="navbar navbar-expand-md bg-dark navbar-dark" style = "padding:0px">
-            <div class="container-lg" style = "padding:0px">
+        <!-- Mobile Floating Menu Button (hidden on desktop) -->
+        <div id="mobile-menu-container" class="mobile-only">
+          <button id="mobile-menu-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span class="menu-icon">•••</span>
+            <span class="menu-text">Menu</span>
+          </button>
+          <div id="mobile-menu-dropdown" class="mobile-menu-dropdown">
+            <a href="#" class="mobile-menu-item active" data-section="about" onclick="showSection('about'); closeMobileMenu(); return false;">
+              <img src="profile.PNG" alt="Logo" width="30" height="30">
+              <span>About Me</span>
+            </a>
+            <a href="#" class="mobile-menu-item" data-section="education" onclick="showSection('education'); closeMobileMenu(); return false;">
+              <span>Education</span>
+            </a>
+            <a href="#" class="mobile-menu-item" data-section="workhistory" onclick="showSection('workhistory'); closeMobileMenu(); return false;">
+              <span>Work History</span>
+            </a>
+            <a href="#" class="mobile-menu-item" data-section="skills" onclick="showSection('skills'); closeMobileMenu(); return false;">
+              <span>Skills</span>
+            </a>
+            <a href="#" class="mobile-menu-item" data-section="projects" onclick="showSection('projects'); closeMobileMenu(); return false;">
+              <span>Projects</span>
+            </a>
+            <a href="#" class="mobile-menu-item" data-section="certificate" onclick="showSection('certificate'); closeMobileMenu(); return false;">
+              <span>Certifications</span>
+            </a>
+          </div>
+        </div>
+        <!-- End Mobile Floating Menu -->
+
+        <!-- Desktop Header (hidden on mobile) -->
+        <div id="header" class="desktop-only">
+          <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="padding:0px">
+            <div class="container-lg" style="padding:0px">
               <!--Navbar text & image logo-->
-              <a class="navbar-brand" style = "padding:0px" href="#" onclick="showSection('about'); return false;">
+              <a class="navbar-brand" style="padding:0px" href="#" onclick="showSection('about'); return false;">
                 <img src="profile.PNG" alt="Logo" width="50" height="50">
-                <span class = "navbar-font-me" style: = "padding:8px">About me</span>
+                <span class="navbar-font-me" style="padding:8px">About me</span>
               </a>
               <!------------Navbar text & image logo--------------->
 
@@ -30,27 +62,27 @@
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link" href="#" data-section="education" onclick="showSection('education'); return false;">
-                        <span class = "navbar-font-me">Education</span>
+                        <span class="navbar-font-me">Education</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" data-section="workhistory" onclick="showSection('workhistory'); return false;">
-                        <span class = "navbar-font-me">Work History</span>
+                        <span class="navbar-font-me">Work History</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" data-section="skills" onclick="showSection('skills'); return false;">
-                        <span class = "navbar-font-me">Skills</span>
+                        <span class="navbar-font-me">Skills</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" data-section="projects" onclick="showSection('projects'); return false;">
-                        <span class = "navbar-font-me">Projects</span>
+                        <span class="navbar-font-me">Projects</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" data-section="certificate" onclick="showSection('certificate'); return false;">
-                        <span class = "navbar-font-me">Certifications & Activities</span>
+                        <span class="navbar-font-me">Certifications & Activities</span>
                     </a>
                   </li>
                 </ul>
@@ -103,13 +135,53 @@
           <div id = "content">
             <!-- ==================== ABOUT SECTION ==================== -->
             <div id="section-about" class="page-section active">
-              <div class = "firstRow">
-                <h1 class = "Element">HOBBIES:</h1>
-                <p class = "DescriptionShort">Sports, Guitar, Travel, Chatting, Music.</p>
+              <!-- Mobile Profile Info (hidden on desktop) -->
+              <div id="mobile-profile-info" class="mobile-only">
+                <div style="text-align:center; padding-top: 20px">
+                  <image src="ava.jpeg" class="img-fluid" style="width:120px; border-radius: 50%; background-color: transparent" alt="Logo"></image>
+                </div>
+                <h1 style="text-align: center; font-size: 150%; font-style: bold; margin-top: 15px"> NGUYEN PHUOC HUY </h1>
+                <h2 style="text-align: center; font-size: 125%; margin-bottom: 20px"> Software Engineer </h2>
+                <div class="mobile-info-container">
+                  <div class="mobile-info">
+                    <image src="birh.png" class="logo" alt="Logo"></image>
+                    <span>04/10/1997</span>
+                  </div>
+                  <div class="mobile-info">
+                    <image src="lephone.png" class="logo" alt="Logo"></image>
+                    <span>+84 (0) 935 096 674</span>
+                  </div>
+                  <div class="mobile-info">
+                    <image src="email.png" class="logo" alt="Logo"></image>
+                    <span>phhuy1997@gmail.com</span>
+                  </div>
+                  <div class="mobile-info">
+                    <image src="address.png" class="logo" alt="Logo"></image>
+                    <span>K72/10 Le Co St., Hoa Cuong Bac Ward, Hai Chau Dist., Da Nang City</span>
+                  </div>
+                  <div class="mobile-social-links">
+                    <a href="https://www.facebook.com/huy.bois/" target="_blank">
+                      <image src="facebook.png" style="width:50px; background-color: transparent" alt="Facebook"></image>
+                    </a>
+                    <a href="https://www.linkedin.com/in/huy-nguyen-820bb924b/" target="_blank">
+                      <image src="linkedin.png" style="width:35px; background-color: transparent" alt="LinkedIn"></image>
+                    </a>
+                    <a href="https://github.com/phhuy1997?tab=repositories" target="_blank">
+                      <image src="github.png" style="width:40px; background-color: transparent" alt="GitHub"></image>
+                    </a>
+                  </div>
+                </div>
+                <hr class="mobile-divider">
               </div>
-              <div class = "FollowingRow">
-                <h1 class = "Element">PERSONALITY:</h1>
-                <p class = "DescriptionShort">Responsible, Gentle, Honest, Ambitious.</p>
+              <!-- End Mobile Profile Info -->
+
+              <div class="firstRow">
+                <h1 class="Element">HOBBIES:</h1>
+                <p class="DescriptionShort">Sports, Guitar, Travel, Chatting, Music.</p>
+              </div>
+              <div class="FollowingRow">
+                <h1 class="Element">PERSONALITY:</h1>
+                <p class="DescriptionShort">Responsible, Gentle, Honest, Ambitious.</p>
               </div>
               <div class="FollowingRow">
                 <h1 class="Element">OBJECTIVES:</h1>
@@ -583,6 +655,29 @@
       </div>
 
       <script>
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+          const dropdown = document.getElementById('mobile-menu-dropdown');
+          const btn = document.getElementById('mobile-menu-btn');
+          dropdown.classList.toggle('show');
+          btn.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+          const dropdown = document.getElementById('mobile-menu-dropdown');
+          const btn = document.getElementById('mobile-menu-btn');
+          dropdown.classList.remove('show');
+          btn.classList.remove('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const menuContainer = document.getElementById('mobile-menu-container');
+          if (menuContainer && !menuContainer.contains(event.target)) {
+            closeMobileMenu();
+          }
+        });
+
         // SPA Navigation JavaScript
         function showSection(sectionName) {
           // Hide all sections
@@ -597,12 +692,21 @@
             targetSection.classList.add('active');
           }
           
-          // Update active state in navbar
+          // Update active state in navbar (desktop)
           const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
           navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('data-section') === sectionName) {
               link.classList.add('active');
+            }
+          });
+          
+          // Update active state in mobile menu
+          const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+          mobileMenuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-section') === sectionName) {
+              item.classList.add('active');
             }
           });
           
@@ -623,6 +727,9 @@
             const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
             bsCarousel.to(0);
           }
+          
+          // Scroll to top on section change (for mobile)
+          window.scrollTo(0, 0);
         }
         
         // Handle browser back/forward buttons
